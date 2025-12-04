@@ -15,7 +15,7 @@ Aplikasi ini melayani dua peran utama:
 
 | Fitur | Deskripsi | Status |
 | :--- | :--- | :--- |
-| **Login & Register** | Sistem autentikasi menggunakan **Supabase Auth** (email/password, Google Sign-in). | ✅ |
+| **Login & Register** | Sistem autentikasi menggunakan **Firebase Auth** (email/password, Google Sign-in). | ✅ |
 | **Profil Kesehatan** | Manajemen profil, input data medis dasar, dan personalisasi akun. | ✅ |
 | **Notifikasi In-App** | Sistem lonceng untuk pesan pengingat obat, artikel baru, atau janji temu. | ✅ |
 | **Integrasi Kontak Darurat** | Fitur cepat untuk menghubungi kontak darurat saat dibutuhkan. | ✅ |
@@ -65,7 +65,7 @@ Aplikasi ini melayani dua peran utama:
 | Kategori | Teknologi | Fungsi |
 | :--- | :--- | :--- |
 | **Frontend** | React.js, Vite | Kerangka aplikasi modern & super cepat |
-| **Backend/BaaS** | Supabase (Auth, PostgreSQL, Storage) | Database, autentikasi, penyimpanan file |
+| **Backend/BaaS** | **Firebase** (Auth, Firestore/Realtime DB, Storage) | Database, autentikasi, penyimpanan file |
 | **UI/Animasi** | Tailwind CSS, Framer Motion, Recharts | Styling, animasi, visualisasi data |
 | **Utility** | React-Query/SWR, Axios | Manajemen state dan fetching data |
 
