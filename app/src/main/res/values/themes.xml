@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <style name="FrequencyRadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:buttonTint">@color/ijofix</item>
+    </style>
+
+    <style name="Theme.Obatin" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_accent</item>
+        <item name="colorAccent">@color/primary_accent</item>
+
+        <item name="colorControlActivated">@color/primary_accent</item>
+
+        <item name="android:textColorPrimary">@color/text_dark</item>
+
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary_accent</item>
+    </style>
+    <style name="CustomAlertDialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="colorPrimary">@color/primary_accent</item>
+        <item name="colorAccent">@color/primary_accent</item>
+    </style>
+
+</resources>

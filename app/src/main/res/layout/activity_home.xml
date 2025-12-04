@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:background="#F1F8E8">
+
+    <ImageButton
+        android:id="@+id/btnPengaturan"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/desc_pengaturan"
+        android:src="@drawable/pengaturan"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:id="@+id/homeScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/btnPengaturan"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo"
+                android:contentDescription="@string/logo_app_desc" />
+
+            <TextView
+                android:id="@+id/tvGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/greeting_user"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#55AD9B"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tvReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:text="@string/reminder_message"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="4dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_menu_search"
+                    android:contentDescription="@string/hint_cari_obat"
+                    app:tint="#55AD9B" />
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/hint_cari_obat"
+                    android:textColor="#55AD9B"
+                    android:textColorHint="#55AD9B"
+                    android:backgroundTint="#55AD9B"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:autofillHints="name" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTitleActiveObat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_active_obat"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:textColor="#000000"
+                android:layout_marginStart="4dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewObat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="40dp"
+                    android:overScrollMode="never"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="40dp"
+                    tools:listitem="@layout/item_medicine_horizontal"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/btn_prev_obat"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@id/recyclerViewObat"
+                    android:layout_alignBottom="@id/recyclerViewObat"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_arrow_back"
+                    android:contentDescription="Kembali"
+                    app:tint="#55AD9B"
+                    android:layout_alignParentStart="true"
+                    android:visibility="gone"/>
+
+                <ImageButton
+                    android:id="@+id/btn_next_obat"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@id/recyclerViewObat"
+                    android:layout_alignBottom="@id/recyclerViewObat"
+                    android:layout_alignParentEnd="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:contentDescription="Berikutnya"
+                    app:tint="#55AD9B"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tvEmptyMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_empty_medicine_list"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:visibility="visible"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnTambah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:contentDescription="@string/desc_tambah_obat"
+        android:src="@android:drawable/ic_input_add"
+        app:tint="#55AD9B"
+        app:backgroundTint="#D8EFD3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

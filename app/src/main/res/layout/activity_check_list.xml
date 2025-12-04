@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    tools:context=".CheckListActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/icon_pill"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Ikon Pil"
+            android:src="@drawable/logobaru"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#424242" />
+
+        <TextView
+            android:id="@+id/text_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="16dp"
+            android:text="Selasa, 4 November 2025"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#424242"
+            app:layout_constraintStart_toEndOf="@+id/icon_pill"
+            app:layout_constraintTop_toTopOf="@+id/icon_pill"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_pill"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/text_medicine_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paracetamol"
+            android:textSize="24sp"
+            android:textColor="#55AD9B"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icon_pill" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_sudah_diminum"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_medicine_name">
+
+            <LinearLayout
+                android:id="@+id/layout_status_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#55AD9B"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="Ikon Ceklis"
+                    android:src="@drawable/centangfix"
+                    app:tint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/text_card_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="SUDAH DIMINUM"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/label_waktu_pengingat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waktu Pengingat"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#424242"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_sudah_diminum" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_reminders"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_waktu_pengingat"
+            tools:listitem="@layout/reminder_item" />
+
+        <TextView
+            android:id="@+id/label_detail_obat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Obat"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#424242"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_view_reminders" />
+
+        <TextView
+            android:id="@+id/label_frekuensi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frekuensi:"
+            android:textColor="#424242"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_detail_obat" />
+        <TextView
+            android:id="@+id/text_refill_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Setiap Hari"
+            android:textColor="#424242"
+            app:layout_constraintStart_toEndOf="@+id/label_frekuensi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/label_frekuensi"
+            app:layout_constraintBottom_toBottomOf="@+id/label_frekuensi" />
+
+        <TextView
+            android:id="@+id/label_catatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Catatan:"
+            android:textColor="#424242"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_frekuensi" />
+        <TextView
+            android:id="@+id/text_notes_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Diminum setelah makan"
+            android:textColor="#424242"
+            app:layout_constraintStart_toEndOf="@+id/label_catatan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/label_catatan"
+            app:layout_constraintBottom_toBottomOf="@+id/label_catatan" />
+
+        <TextView
+            android:id="@+id/label_akhir_pengobatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Akhir Pengobatan:"
+            android:textColor="#424242"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_catatan" />
+        <TextView
+            android:id="@+id/text_end_date_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Tidak Ada"
+            android:textColor="#424242"
+            app:layout_constraintStart_toEndOf="@+id/label_akhir_pengobatan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/label_akhir_pengobatan"
+            app:layout_constraintBottom_toBottomOf="@+id/label_akhir_pengobatan" />
+
+        <LinearLayout
+            android:id="@+id/layout_action_buttons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_akhir_pengobatan">
+
+            <Button
+                android:id="@+id/button_edit_main"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="UBAH JADWAL"
+                android:backgroundTint="#55AD9B"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/button_hapus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="AKHIRI JADWAL"
+                android:backgroundTint="#FF5252"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/label_kepatuhan_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kepatuhan Minum Obat"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#424242"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_action_buttons" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/adherence_chart"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_kepatuhan_judul" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

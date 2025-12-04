@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="#E0E0E0"
+            android:layout_marginEnd="12dp">
+            <TextView
+                android:id="@+id/tv_reminder_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:text="14:05"
+                android:textSize="14sp"
+                android:textColor="#333333"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#E0E0E0"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:id="@+id/tv_reminder_dosage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:text="💊 2.0 mg"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/btn_edit_reminder"
+            android:layout_width="36dp" android:layout_height="36dp"
+            android:padding="6dp" android:background="@drawable/rounded_dark_bg" android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/edit_desc"
+            android:src="@drawable/icon_edit"
+            app:tint="#616161" />
+
+        <ImageButton
+            android:id="@+id/btn_delete_reminder"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="6dp" android:background="@android:color/transparent"
+            android:src="@drawable/icon_sampah_merah"
+            app:tint="#D32F2F"
+            android:contentDescription="@string/hapus_desc"
+            android:layout_marginStart="8dp"/> </LinearLayout>
+</androidx.cardview.widget.CardView>

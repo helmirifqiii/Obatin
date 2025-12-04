@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Obatin</string>
+    <string name="logo_app_desc">Logo Aplikasi Obat</string>
+    <string name="greeting_user">Hallo Pengguna</string>
+    <string name="greeting_user_with_name">Hallo %s</string>
+    <string name="reminder_message">Jangan lupa minum obat 💊</string>
+
+    <string name="title_login">Masuk</string>
+    <string name="title_register">Daftar Akun Baru</string>
+    <string name="hint_name">Nama Lengkap</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Konfirmasi Password</string>
+    <string name="btn_login_masuk">Masuk</string>
+    <string name="btn_register_daftar">Daftar</string>
+    <string name="checkbox_remember_me">Ingat saya</string>
+    <string name="link_lupa_password">Lupa Password?</string>
+    <string name="link_punya_akun">Sudah punya akun?</string>
+    <string name="link_belum_punya_akun">Belum punya akun?</string>
+    <string name="link_masuk_sekarang">Masuk sekarang</string>
+    <string name="link_daftar_sekarang">Daftar sekarang</string>
+
+    <string name="desc_profile">Profile</string>
+    <string name="hint_cari_obat">Cari obat anda...</string>
+    <string name="obat_sample_name">Paracetamol</string>
+    <string name="obat_sample_desc">Obat penurun demam dan pereda nyeri ringan seperti sakit kepala atau nyeri otot.</string>
+    <string name="desc_pengaturan">Pengaturan Aplikasi</string>
+    <string name="desc_tambah_obat">Tambah Obat Baru</string>
+    <string name="desc_image_obat">Gambar Obat</string>
+    <string name="icon_obat_desc">Ikon Pil</string>
+    <string name="text_loading_data">Memuat data obat...</string>
+    <string name="text_empty_medicine_list">Belum ada obat yang ditambahkan.</string>
+    <string name="error_loading_data">Gagal memuat data:</string>
+    <string name="ubah">UBAH</string>
+    <string name="text_search_empty_result">Tidak ditemukan obat dengan nama \'%s\'.</string>
+    <string name="unit_default">unit</string>
+    <string name="notification_channel_name">Pengingat Obat</string>
+    <string name="notification_channel_desc">Saluran notifikasi pengingat minum obat.</string>
+    <string name="hint_whatsapp_number">Nomor WhatsApp (Cth: 0812xxxx)</string>
+
+    <string name="nama_obat_hint">Nama obat</string>
+    <string name="waktu_judul">Waktu Obat</string>
+    <string name="catatan_opsional">Apakah Anda ingin menambahkan catatan untuk obat ini? (opsional)</string>
+    <string name="pengingat_judul">Apakah Anda perlu pengingat isi ulang obat?</string>
+    <string name="simpan">Simpan</string>
+    <string name="tidak">Tidak</string>
+    <string name="ya">Ya</string>
+
+    <string name="frekuensi_judul">Seberapa sering Anda perlu mengonsumsi obat ini?</string>
+    <string name="frekuensi_setiap_hari">Setiap hari</string>
+    <string name="frekuensi_hari_tertentu">Hari tertentu dalam seminggu</string>
+    <string name="frekuensi_setiap_x">Setiap \'X\' hari / minggu / bulan</string>
+    <string name="frekuensi_sesuai_kebutuhan">Sesuai kebutuhan</string>
+    <string name="min">Min</string>
+    <string name="sen">Sen</string>
+    <string name="sel">Sel</string>
+    <string name="rab">Rab</string>
+    <string name="kam">Kam</string>
+    <string name="jum">Jum</string>
+    <string name="sab">Sab</string>
+
+    <string name="waktu_dosis_judul">Waktu dan Dosis Obat</string>
+    <string name="tambah_waktu_dosis">TAMBAHKAN WAKTU &amp; DOSIS</string>
+    <string name="tanggal_waktu_obat_judul">Tanggal dan waktu obat</string>
+    <string name="dosis_judul">Berapa banyak yang Anda konsumsi pada waktu ini?</string>
+    <string name="minus_button">-</string>
+    <string name="plus_button">+</string>
+    <string name="dosage_default">1.0</string>
+    <string name="unit_mg">mg</string>
+    <string name="unit_mcg">mcg</string>
+    <string name="unit_ml">ml</string>
+    <string name="tanggal_mulai_placeholder">Tanggal Mulai\n13 Oktober 2025</string>
+    <string name="tanggal_berakhir_placeholder">Tanggal Berakhir\ntidak ada</string>
+
+    <string name="medicine_schedule_format">Pukul %1$s, Dosis: %2$s %3$s</string>
+    <string name="medicine_schedule_unset">Jadwal belum diatur</string>
+
+    <string name="edit_desc">Edit Waktu/Dosis</string>
+    <string name="waktu_placeholder">12:00</string>
+    <string name="dosis_placeholder">1</string>
+    <string name="hapus_desc">Hapus Waktu</string>
+    <string name="title_active_obat">Obat Aktif Anda</string>
+
+</resources>

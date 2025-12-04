@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih hari tertentu dalam seminggu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/text_dark"/>
+
+    <LinearLayout
+        android:id="@+id/day_toggle_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ToggleButton android:id="@+id/toggle_min"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/min"
+            android:textOn="@string/min"
+            android:background="@drawable/toggle_day_selector"
+            android:textColor="@color/toggle_day_text_color"
+            android:layout_marginHorizontal="2dp"/>
+
+        <ToggleButton android:id="@+id/toggle_sen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/sen"
+            android:textOn="@string/sen"
+            android:background="@drawable/toggle_day_selector"
+            android:textColor="@color/toggle_day_text_color"
+            android:layout_marginHorizontal="2dp"/>
+
+        <ToggleButton android:id="@+id/toggle_sel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/sel"
+            android:textOn="@string/sel"
+            android:background="@drawable/toggle_day_selector"
+            android:textColor="@color/toggle_day_text_color"
+            android:layout_marginHorizontal="2dp"/>
+
+        <ToggleButton android:id="@+id/toggle_rab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/rab"
+            android:textOn="@string/rab"
+            android:background="@drawable/toggle_day_selector"
+            android:textColor="@color/toggle_day_text_color"
+            android:layout_marginHorizontal="2dp"/>
+
+        <ToggleButton android:id="@+id/toggle_kam"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/kam"
+            android:textOn="@string/kam"
+            android:background="@drawable/toggle_day_selector"
+            android:textColor="@color/toggle_day_text_color"
+            android:layout_marginHorizontal="2dp"/>
+
+        <ToggleButton android:id="@+id/toggle_jum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/jum"
+            android:textOn="@string/jum"
+            android:background="@drawable/toggle_day_selector"
+            android:textColor="@color/toggle_day_text_color"
+            android:layout_marginHorizontal="2dp"/>
+
+        <ToggleButton android:id="@+id/toggle_sab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/sab"
+            android:textOn="@string/sab"
+            android:background="@drawable/toggle_day_selector"
+            android:textColor="@color/toggle_day_text_color"
+            android:layout_marginHorizontal="2dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
